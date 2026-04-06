@@ -1,0 +1,48 @@
+---
+import "../styles/global.css";
+const pageTitle = "About Me";
+const name = "Ethan";
+const hometown = "Durango, Colorado";
+const hobbies = ["music", "video games", "snowboarding", "working out"];
+const student = true;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/blog">Blog</a>
+    </nav>
+
+    <h1>{pageTitle}</h1>
+    <h2>Hello, my name is {name}.</h2>
+    <p>I’m from {hometown}.</p>
+    <p>My hobbies are {hobbies.join(", ")}.</p>
+
+    {student && <p>I am currently building my first Astro website.</p>}
+  </body>
+</html>
+
+<style>
+  h1 {
+    color: navy;
+  }
+
+  h2 {
+    color: darkgreen;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  nav a {
+    margin-right: 12px;
+  }
+</style>
