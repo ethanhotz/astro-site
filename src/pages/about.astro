@@ -18,15 +18,14 @@ const student = true;
   </head>
   <body>
     <Header />
+
     <h1>{pageTitle}</h1>
     <h2>Hello, my name is {name}.</h2>
     <p>I’m from {hometown}.</p>
     <p>My hobbies are {hobbies.join(", ")}.</p>
     {student && <p>I am currently building my first Astro website.</p>}
+
     <Footer />
-    <script>
-      import "../scripts/menu.js";
-    </script>
   </body>
 </html>
 
