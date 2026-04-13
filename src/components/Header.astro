@@ -6,8 +6,21 @@ import Navigation from './Navigation.astro';
 <header>
   <nav>
     <Menu />
-    <div class="nav-links">
+    <div class="nav-links" id="nav-links">
       <Navigation />
     </div>
   </nav>
 </header>
+
+<script>
+  const menuButton = document.querySelector('.menu') as HTMLButtonElement | null;
+  const navLinks = document.querySelector('.nav-links') as HTMLDivElement | null;
+
+  if (menuButton && navLinks) {
+    menuButton.addEventListener('click', () => {
+      const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!expanded));
+      navLinks.style.display = expanded ? 'none' : 'block';
+    });
+  }
+</script>
