@@ -12,9 +12,9 @@ import Navigation from './Navigation.astro';
   </nav>
 </header>
 
-<script>
-  const menuButton = document.querySelector('.menu') as HTMLButtonElement | null;
-  const navLinks = document.querySelector('.nav-links') as HTMLDivElement | null;
+<script is:inline>
+  const menuButton = document.querySelector('.menu');
+  const navLinks = document.querySelector('.nav-links');
 
   if (menuButton && navLinks) {
     menuButton.addEventListener('click', () => {
