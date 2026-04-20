@@ -1,7 +1,5 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import Layout from '../layouts/Layout.astro';
 
 const pageTitle = "About Me";
 const name = "Ethan";
@@ -10,24 +8,13 @@ const hobbies = ["music", "video games", "snowboarding", "working out"];
 const student = true;
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <Header />
-
-    <h1>{pageTitle}</h1>
-    <h2>Hello, my name is {name}.</h2>
-    <p>I’m from {hometown}.</p>
-    <p>My hobbies are {hobbies.join(", ")}.</p>
-    {student && <p>I am currently building my first Astro website.</p>}
-
-    <Footer />
-  </body>
-</html>
+<Layout pageTitle={pageTitle}>
+  <h1>{pageTitle}</h1>
+  <h2>Hello, my name is {name}.</h2>
+  <p>I’m from {hometown}.</p>
+  <p>My hobbies are {hobbies.join(", ")}.</p>
+  {student && <p>I am currently building my first Astro website.</p>}
+</Layout>
 
 <style>
   h1 {
