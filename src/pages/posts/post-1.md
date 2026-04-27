@@ -3,6 +3,7 @@ layout: ../../layouts/MarkdownLayout.astro
 title: My First Blog Post
 description: My first blog post built with Astro.
 pubDate: 2026-04-19
+tags: ["astro", "webdev", "blog"]
 ---
 
 This is my first post using Markdown in Astro.
